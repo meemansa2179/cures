@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container-fluid {
+    height: 100%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*Background color*/
+#grad1 {
+    background-color: #7F8DFF;
+}
+
+/*form styles*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    /* box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2); */
+    padding: 5px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3%;
+    position: relative;
+}
+
+#msform fieldset .landing-img {
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    color: #323232;
+}
+
+#msform input[type="text"],
+input[type="email"] #msform textarea {
+    border: none;
+    border: 1px solid #afa9a9;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.form-control {
+    border: 1px solid #afa9a9;
+}
+
+.checkbox label,
+.radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.checkbox input[type=checkbox],
+.radio input[type=radio] {
+    position: absolute;
+    margin-left: -20px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    margin: 6px 0 0;
+    line-height: normal;
+}
+
+/*Blue Buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #37345D;
+    font-weight: bold;
+    color: white;
+    text-decoration: none !important;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #7F8DFF;
+}
+
+/*Previous Buttons*/
+#msform .action-button-previous {
+    width: 100px;
+    background: #7F8DFF;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #37345D;
+}
+
+
+/*Danger Buttons*/
+#msform .action-button-danger {
+    width: 120px;
+    background: #f2756f;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-danger:hover,
+#msform .action-button-danger:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+}
+
+
+/*Dropdown List Exp Date*/
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px;
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue;
+}
+
+/*The background card*/
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+/*FieldSet headings*/
+.fs-title {
+    font-size: 25px;
+    color: #37345D;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 5px;
+    overflow: hidden;
+    color: lightgrey;
+    display: flex;
+}
+
+#progressbar .active {
+    color: #000000;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+/*Numbers in the ProgressBar*/
+#progressbar #step0:before {
+    content: "Start";
+}
+
+#progressbar #step1:before {
+    content: "1"
+}
+
+#progressbar #step2:before {
+    content: "2"
+}
+
+#progressbar #step3:before {
+    content: "3"
+}
+
+#progressbar #step4:before {
+    content: "4"
+}
+
+#progressbar #step5:before {
+    content: "5"
+}
+
+#progressbar #step6:before {
+    content: "6"
+}
+
+#progressbar #step7:before {
+    content: "End"
+}
+
+/*ProgressBar before any progress*/
+#progressbar li:before {
+    width: 45px;
+    height: 45px;
+    line-height: 40px;
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+    font-weight: bold;
+}
+
+/*ProgressBar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+/*Color number of the step and the connector before it*/
+#progressbar li.active:before {
+    background: #7F8DFF;
+}
+
+#progressbar li.active:after {
+    background: #37345D;
+}
+
+/*Imaged Radio Buttons*/
+.radio-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.radio,
+.checkbox {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.radio-label {
+    display: inline-table;
+}
+
+input[type="radio"]:checked+.radio-label img, input[type="checkbox"]:checked+.radio-label img {
+    border: 3px solid #7F8DFF;
+}
+
+.radio-button-img {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.radio-button-img:hover {
+    box-shadow: 1px 1px 8px #37345D;
+}
+
+.caption-position {
+    display: table-caption;
+    caption-side: bottom;
+}
+
+.tagline {
+    margin-bottom: 20px;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+.typewriter h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.line1::after,
+.line2::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite alternate;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
